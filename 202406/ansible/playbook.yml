@@ -1,0 +1,32 @@
+- name: Playbook principal
+    hosts: localhost
+    become: yes
+
+    tasks:
+      - name: Ejecutar el role multi_Pruebas
+              include_role:
+                name: multi_Pruebas
+
+     - name: Verificar archivos generados
+       debug:
+         msg:
+          - "Archivo /tmp/2do_parcial/alumno/datos_alumno.txt generado correctamente."
+          - "Archivo /tmp/2do_parcial/equipo/datos_equipo.txt generado correctamente."
+
+    - name: Mostrar contenido del archivo datos_alumno.txt
+      command: cat /tmp/2do_parcial/alumno/datos_alumno.txt
+      register: alumno_output
+
+    - name: Contenido de datos_alumno.txt
+      debug:
+        var: alumno_output.stdout
+
+    - name: Mostrar contenido del archivo datos_equipo.txt
+      command: cat /tmp/2do_parcial/equipo/datos_equipo.txt
+      register: equipo_output
+
+    - name: Contenido de datos_equipo.txt
+      debug:
+        var: equipo_output.stdout
+
+    ansible-playbook playbook.yml

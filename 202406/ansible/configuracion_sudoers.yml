@@ -1,0 +1,17 @@
+- name: Configurar sudoers para 2PSupervisores
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Crear grupo 2PSupervisores si no existe
+      group:
+        name: 2PSupervisores
+        state: present
+
+ - name: Configurar sudo sin contraseña para el grupo 2PSupervisores
+   lineinfile:
+     path: /etc/sudoers.d/2PSupervisores
+     create: yes
+     line: '%2PSupervisores ALL=(ALL) NOPASSWD:ALL'
+     mode: '0440'
+
+  ansible-playbook configuracion_sudoers.yml
