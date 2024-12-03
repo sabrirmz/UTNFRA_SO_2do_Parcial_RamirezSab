@@ -1,0 +1,506 @@
+    1  pwd
+    2  sudo fdisk -l
+    3  exit
+    4  git clone https://github.com/upszot/UTN-FRA_SO_Examenes.git
+    5  ./UTN-FRA_SO_Examenes/202406/script_Precondicion.sh
+    6  source  ~/.bashrc  && history -a
+    7  mkdir RTA_Examen_T(date +%Y%m%d)
+    8  mkdir RTA_Examen_T(date+%Y%m%d)
+    9  mkdir RTA_Examen_T$(date +%Y%m%d)
+   10  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+   11  # Add Docker's official GPG key:
+   12  sudo apt-get update
+   13  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   14  sudo docker run hello-world
+   15  id
+   16  sudo usermod -a -G docker $(whoami)
+   17  cat /etc/group
+   18  sudo apt update
+   19  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   20  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+   21  cat /etc/group
+   22  # Add Docker's official GPG key:
+   23  sudo apt-get update
+   24  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   25  curl -fsSL https://get.docker.com -o get-docker.sh
+   26  sudo sh get-docker.sh
+   27  sudo docker run hello-world
+   28  id
+   29  sudo usermod -a -G docker $(whoami)
+   30  id
+   31  exit
+   32  id
+   33  sudo fdisk -l
+   34  sudo fdisk /dev/sde
+   35  sudo fdisk /dev/sdd
+   36  sudo wipefs -a /dev/sde1 /dev/sdd1 /dev/sdd2
+   37  sudo pvcreate /dev/sde1 /dev/sdd1 /dev/sdd2
+   38  sudo pvs
+   39  sudo vgcreate vg_datos /dev/sde1
+   40  sudo vgcreate vg_temp /dev/sdd1
+   41  sudo vgs
+   42  sudo pvs
+   43  sudo lvcreate -L -5M vg_datos -n lv_docker
+   44  sudo lvcreate -L 5M vg_datos -n lv_docker
+   45  sudo lvcreate -L 1.5G vg_datos -n lv_workareas
+   46  sudo lvcreate -L 512M vg_datos -n lv_swap
+   47  sudo lvs
+   48  sudo lvcreate -L 508M vg_datos -n lv_swap
+   49  sudo lvcreate -L 507M vg_datos -n lv_swap
+   50  sudo lvcreate -L 500M vg_datos -n lv_swap
+   51  sudo lvs
+   52  sudo vgs
+   53  sudo fdisk -l
+   54  sudo mkswap /dev/mapper/vg_temp-lv_swap
+   55  sudo mkswap  = 512 bytes
+   56  lvremove /dev/mapper/vg_datos-lv_swap
+   57  sudo lvremove /dev/mapper/vg_datos-lv_swap
+   58  sudo lvcreate -L 507M vg_temp -n lv_swap
+   59  sudo lvs
+   60  sudo mkswap /dev/mapper/vg_temp-lv_swap
+   61  sudo swapon /dev/mapper/vg_temp-lv_swap
+   62  free
+   63  sudo mkfs.ext4 /dev/mapper/vg_datos-lv_docker
+   64  sudo mkfs.ext4 /dev/mapper/vg_datos-lv_workareas
+   65  echo "/dev/vg_datos/lv_docker /var/lib/docker ext4 defaults 0 0" | sudo tee -a /etc/fstab
+   66  echo "/dev/vg_datos/lv_workareas /work ext4 defaults 0 0" | sudo tee -a /etc/fstab
+   67  lsblk
+   68  df -h
+   69  sudo systemctl docker
+   70  sudo systemctl docker status
+   71  sudo systemctl status docker
+   72  ls -l
+   73  rmdir RTA_Examen_T20241126
+   74  ls -l
+   75  cd UTN-FRA_SO_Examenes
+   76  ls -l
+   77  cd 202406
+   78  ls -l
+   79  cd docker
+   80  ls -l
+   81  cat index.html
+   82  vim index.html
+   83  docker run  -d   -p 80:80 -v "$PWD"/share/html:/usr/share/nginx/html nginx
+   84  docker build -t "sabrirmz/web1-ramirez" "/home/sabrina/UTN-FRA_SO_Examenes/202406/docker"
+   85  ls
+   86  cd share
+   87  ls
+   88  vim dockerfile
+   89  cd ..
+   90  ls -l
+   91  vim dockerfile
+   92  docker build -t "sabrirmz/web1-ramirez" "/home/sabrina/UTN-FRA_SO_Examenes/202406/docker"
+   93  mkdir static-html-directory
+   94  ls 
+   95  cd static-html-directory
+   96  cd ..
+   97  mv index.html static-html-directory/
+   98  ls 
+   99  docker build -t "sabrirmz/web1-ramirez" "/home/sabrina/UTN-FRA_SO_Examenes/202406/docker"
+  100  docker run -d -p 8080:80 --name "nginx-container" "sabrirmz/web-1ramirez"
+  101  docker run -d -p 8080:80 --name "nginx-container" "sabrirmz/web1-ramirez"
+  102  docker login -u sabrirmz
+  103  docker push sabrirmz/web1-ramirez:pagina
+  104  docker push sabrirmz/web1-ramirez:latest
+  105  cd ..
+  106  ls -l
+  107  cd ansible
+  108  ls -l
+  109  cd ..
+  110  exit
+  111  pwd
+  112  sudo apt list --installed docker
+  113  sudo apt list --installed ansible
+  114  sudo apt list
+  115  clear
+  116  pwd
+  117  ls -l
+  118  cd RTA_Examen_20241126
+  119  ls -l
+  120  cd Punto_D.sh
+  121  Punto_A.sh
+  122  cd Punto_A.sh
+  123  cd ..
+  124  ls -l
+  125  UTN-FRA_SO_Examenes
+  126  cd UTN-FRA_SO_Examenes
+  127  ls -l
+  128  cd ..
+  129  ls -l
+  130  lsblk
+  131  history -a
+  132  ls -l
+  133  sudo fkdisk -l
+  134  sudo fdisk -l
+  135  m
+  136  id
+  137  n
+  138  m
+  139  lsblk
+  140  df -n
+  141  df -h
+  142  ls -l
+  143  cd UTN-FRA_SO_Examenes
+  144  ls -l
+  145  cd 202406
+  146  ls -l
+  147  cd script_Precondition.sh
+  148  cd script_Precondicion.sh
+  149  cd _checks
+  150  ls -l
+  151  cd ..
+  152  sudo apt update
+  153  sudo apt install -y ansible
+  154  sudo apt install git
+  155  sudo apt --installed ansible
+  156  sudo apt update
+  157  sudo apt --installed ansible
+  158  sudo apt list --installed
+  159  sudo apt --installed | grep ansible
+  160  apt list --installed | grep ansible
+  161  pwd
+  162  ls -l
+  163  pwd
+  164  sudo apt install git
+  165  sudo apt update
+  166  ssh-keygen -t ed25519
+  167  ls -l
+  168  echo "Generando clave SSH..."
+  169  ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""
+  170  y
+  171  echo "Generando clave SSH..."
+  172  ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""
+  173  cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys
+  174  ls -l
+  175  cd UTN-FRA_SO_Examenes
+  176  ls -l
+  177  cd 202406
+  178  ls -l
+  179  cd ansible
+  180  ls -l
+  181  cd inventory
+  182  ls -l
+  183  cd ..
+  184  ls -l
+  185  cd playbook.yml
+  186  cd roles
+  187  ls -l
+  188  cd 2do_parcial
+  189  ls -l
+  190  cd tasks
+  191  ls -l
+  192  cd main.yml
+  193  cd ..
+  194  ls -l
+  195  -l
+  196  cd ..
+  197  ls -l
+  198  cd inventory
+  199  ls -l
+  200  cd ..
+  201  ansible-playbook -i tests/inventory tests/test.yml
+  202  ls -l
+  203  cd README.md
+  204  cat README.md
+  205  cd ..
+  206  cd /UTN-FRA_SO_Examenes/202311_Recu/ansible
+  207  ls -l
+  208  cd /UTN-FRA_SO_Examenes
+  209  cd UTN-FRA_SO_Examenes
+  210  ls -l
+  211  cd UTN-FRA_SO_Examenes
+  212  ls -l
+  213  cd ..
+  214  sudo apt --installed | grep ansible
+  215  apt list --installed | grep ansible
+  216  ls -l
+  217  cd UTN-FRA_SO_Examenes
+  218  ls -l
+  219  cd 202311_Recu
+  220  ls -l
+  221  cd ansible
+  222  ls -l
+  223  pwd
+  224  sh
+  225  ls -l
+  226  ct playbook.yml
+  227  cat playbook.yml
+  228  vim playbook.yml
+  229  cd ..
+  230  cd ansible
+  231  reset; ansible-playbook -i inventory/hosts playbook.yml
+  232  202311_Recu2doParcial.yml
+  233  cd ..
+  234  cd UTN-FRA_SO_Examenes/202406/ansible
+  235  cd UTN-FRA_SO_Examenes
+  236  ls -l
+  237  cd 202404
+  238  cat 202406
+  239  cd ..
+  240  ls -l
+  241  cd UTN-FRA_SO_Examenes
+  242  ls -l
+  243  cd 202406
+  244  ls -l
+  245  cd ansible
+  246  ls -l
+  247  mkdir -p /tmp/2do_parcial/alumno
+  248  mkdir -p /tmp/2do_parcial/equipo
+  249  tree /tmp/2do_parcial
+  250  cd ..
+  251  sudo apt install tree
+  252  ls -l
+  253  cd UTN-FRA_SO_Examenes
+  254  ls -l
+  255  cd 202406
+  256  ls -l
+  257  mkdir -p /tmp/2do_parcial/alumno
+  258  mkdir -p /tmp/2do_parcial/equipo
+  259  tree /tmp/2do_parcial
+  260  sudo mkdir -p multi_Pruebas/templates
+  261  sudo vim datos_alumno.j2
+  262  sudo vim datos_equipo.j2
+  263  ls -l
+  264  cd ansible
+  265  ls -l
+  266  cd roles
+  267  ls -l
+  268  cd ..
+  269  tree /tmp/2do_parcial
+  270  /tmp/2do_parcial/alumno/datos_alumno.txt
+  271  ls -l
+  272  cd roles
+  273  ls -l
+  274  cd 2do_parcial
+  275  ls -l
+  276  cd tasks
+  277  la -l
+  278  ls -l
+  279  cat main.yml
+  280  vim main.yml
+  281  cd ..
+  282  ls -l
+  283  cd ..
+  284  ls -l
+  285  cd ..
+  286  ls -l
+  287  cat playbook.yml
+  288  sudo vim ~/UTN-FRA_SO_Examenes/202406/ansible/playbook.yml
+  289  cat /tmp/2do_parcial/alumno/datos_alumno.txt
+  290  ls -l
+  291  sudo vim configuracion_sudoers.yml
+  292  cd ..
+  293  pwd
+  294  ssh-keygen -t ed25519
+  295  /.ssh$ ls -la
+  296  ls -la
+  297  .ssh
+  298  cd ..
+  299  ls -l
+  300  cd sabrina
+  301  ls -l
+  302  ssh-keygen -t ed25519
+  303  ls -la
+  304  ssh
+  305  cd .ssh
+  306  ls -la
+  307  cat id_ed25519.pub
+  308  cat id_ed25519.pub > authorized_keys
+  309  ls -la
+  310  cat id_ed25519.pub
+  311  cd ..
+  312  git clone https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  313  ls -la
+  314  cd UTNFRA_SO_2do_Parcial_RamirezSab
+  315  ls -l
+  316  cp ~/.bash_history .
+  317  cp -r ~/UTN_SO_Examenes/202406/ .
+  318  ls -la
+  319  cat .bash_history
+  320  cp -r ~/UTN-FRA_SO_Examenes/202406/ .
+  321  cp -r ~/RTA_Examen/20241117/ .
+  322  cp -r ~/RTA_Examen_20241117/ .
+  323  git config --global user.name "sabrirmz"
+  324  git config --global user.email "sabriiramirez11@gmail.com"
+  325  git push
+  326  git add.
+  327  git add .
+  328  git commit -m "parcial"
+  329  git push
+  330  git remote set-url origin git@github.com:sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  331  ssh -T git@github.com
+  332  cd ..
+  333  ls -l
+  334  cd RTA_Examen_20241126/
+  335  history -a
+  336  cat ~/.bash_history
+  337  cd ..
+  338  history -a
+  339  ls -l
+  340  cd UTNFRA_SO_2do_Parcial_RamirezSab
+  341  cp -r /UTN-FRA_SO_Examenes/202406 ./202406
+  342  ls -ls
+  343  cp -r /UTN-FRA_SO_Examenes/202406 ./202406
+  344  rm -rf ./RTA_Examen_20241114
+  345  cp -r /path/to/RTA_Examen_20241114 ./RTA_Examen_20241114
+  346  ls -l
+  347  cd ..
+  348  cd UTNFRA_SO_2do_Parcial_RamirezSab
+  349  cp ~/.bash_history ./
+  350  tree
+  351  history -a
+  352  git add .
+  353  git add RTA_Examen_20241114
+  354  git add /RTA_Examen_202406
+  355  git commit -m "parcial"
+  356  git branch
+  357  git config user.name "sabrirmz"
+  358  git config user.email "sabriiramirez11@gmail.com"
+  359  git add .
+  360  git commit -m "parcial"
+  361  git push https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  362  git remote -v
+  363  git remote set-url origin https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  364  git push https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  365  git credential-manager-core erase
+  366  cd ..
+  367  git push https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  368  ls -l
+  369  cat Punto_A.sh
+  370  cd ..
+  371  cd UTNFRA_SO_2do_Parcial_RamirezSab
+  372  ls -l
+  373  cd 202406
+  374  ls -l
+  375  cd ..
+  376  git push git@github.com:sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  377  git push https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  378  git push
+  379  ls -l
+  380  cd UTNFRA_SO_2do_Parcial_RamirezSab
+  381  ls -l
+  382  cd ..
+  383  git push
+  384  cd RTA_Examen_20241106
+  385  cd ..
+  386  ls -l
+  387  cd sabrina
+  388  ls -l
+  389  cd RTA_Examen_20241126
+  390  git add UTNFRA_SO_2do_Parcial_RamirezSab
+  391  git add https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  392  cd TNFRA_SO_2do_Parcial_RamirezSab
+  393  cd UTNFRA_SO_2do_Parcial_RamirezSab
+  394  ls -l
+  395  cd ;;
+  396  cd ..
+  397  cd UTNFRA_SO_2do_Parcial_RamirezSab
+  398  ls -l
+  399  cd ..
+  400  git remote add origin https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  401  sudo git remote add origin https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  402  git init
+  403  sudo git remote add origin https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  404  git remote -v
+  405  git add .
+  406  git commit -m "parcial"
+  407  git push -u origin master
+  408  git credential reject
+  409  cat ~/.ssh/id_rsa.pub
+  410  git remote set-url origin git@github.com:sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  411  ssh -T git@github.com
+  412  ls -al ~/.ssh
+  413  git remote set-url origin git@github.com:sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  414  git push -u origin master
+  415  git commit -m "parcial"
+  416  git push https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  417  git commit -m "parcial"
+  418  git push
+  419  git push --set-upstream origin master
+  420  git push -u origin master
+  421  sudo apt install git
+  422  git config --global user.name sabrirmz
+  423  git config --global user.email sabriiramirez11@gmail.com
+  424  cd /vagrant/UTNFRA_SO_2do_Parcial_RamirezSab
+  425  ls -l
+  426  cd RTA_Examen_20241126
+  427  git status
+  428  cd ..
+  429  git remote add origin git@github.com:sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+  430  git add .
+  431  git commit -m "commit del parical"
+  432  git push -u origin master
+  433  git push
+  434  ls -l
+  435  sudo lsblk
+  436  fdisk
+  437  sudo fdisk
+  438  lsblk
+  439  sudo fdisk -l
+  440  df -h
+  441  lsblk > discos_info.txt
+  442  sudo fdisk -l > discos_fdisk.txt
+  443  cat discos_info.txt
+  444  mv discos_info.txt RTA_Examen_20241114/Punto_A.sh
+  445  ls -l
+  446  rm discos
+  447  rm discos_fdisk.txt
+  448  ls -l
+  449  rm discos_info.txt
+  450  ls -l
+  451  clear
+  452  ls -l
+  453  cd UTN-FRA_SO_Examenes
+  454  ls -l
+  455  cd 202406
+  456  ls -l
+  457  cd docker
+  458  ls -l
+  459  cd ..
+  460  cd bash_script
+  461  ls -l
+  462  cat Lista_Usuarios.txt
+  463  cd ..
+  464  ls -l
+  465  cat 240406_2doParcial.pdf
+  466  cd multi_Pruebas
+  467  ls -l
+  468  cd templates
+  469  ls -l
+  470  cd ..
+  471  ls -l
+  472  cd RTA_Examen_20241126
+  473  ls -l
+  474  cat Punto_A.sh
+  475  cd ..
+  476  ls -l
+  477  cd vagrant
+  478  cd sabrina
+  479  ls -l
+  480  cd get-docker.sh
+  481  cd UTNFRA_SO_2do_Parcial_RamirezSab
+  482  ls -l
+  483  cd 202406
+  484  ls -l
+  485  cd ..
+  486  id
+  487  ls -l
+  488  free -h
+  489  df -h
+  490  free
+  491  cat /etc/passwd
+  492  ls -l
+  493  cd UTN-FRA_SO_Examenes
+  494  ls -l
+  495  cd 202406
+  496  ls -l
+  497  cd docker
+  498  ls -l
+  499  cd ..
+  500  ls -l
+  501  df -h
+  502  free
+  503  sudo vgs
+  504  history
+  505  history > UTNFRA_SO_2do_Parcial_RamirezSab/history_1.txt
+  506  history > history_1.txt
