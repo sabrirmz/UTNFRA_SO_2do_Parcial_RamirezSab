@@ -313,3 +313,36 @@ git clone https://github.com/sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
 ls -la
 cd UTNFRA_SO_2do_Parcial_RamirezSab
 ls -l
+cp ~/.bash_history .
+cp -r ~/UTN_SO_Examenes/202406/ .
+ls -la
+cat .bash_history
+cp -r ~/UTN-FRA_SO_Examenes/202406/ .
+cp -r ~/RTA_Examen/20241117/ .
+cp -r ~/RTA_Examen_20241117/ .
+git config --global user.name "sabrirmz"
+git config --global user.email "sabriiramirez11@gmail.com"
+git push
+git add.
+git add .
+git commit -m "parcial"
+git push
+git remote set-url origin git@github.com:sabrirmz/UTNFRA_SO_2do_Parcial_RamirezSab.git
+ssh -T git@github.com
+cd ..
+ls -l
+cd RTA_Examen_20241126/
+history -a
+cat ~/.bash_history
+cd ..
+history -a
+ls -l
+cd UTNFRA_SO_2do_Parcial_RamirezSab
+cp -r /UTN-FRA_SO_Examenes/202406 ./202406
+ls -ls
+cp -r /UTN-FRA_SO_Examenes/202406 ./202406
+rm -rf ./RTA_Examen_20241114
+cp -r /path/to/RTA_Examen_20241114 ./RTA_Examen_20241114
+ls -l
+cd ..
+cd UTNFRA_SO_2do_Parcial_RamirezSab
